@@ -8,7 +8,7 @@ public class Read {
 	public static void main(String[] args)  {
 		
 		try {
-			File file=new File("C:\\Users\\SPURGEE\\Downloads\\input.properties");
+			File file=new File("input.properties");
 			Scanner sc=new Scanner(file);
 			
 			while(sc.hasNextLine()) {
