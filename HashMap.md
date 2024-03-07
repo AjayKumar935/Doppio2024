@@ -80,3 +80,59 @@ public class Hashmap {
 }
 
 ```
+
+
+### Printing the duplicate values using the hashMap
+
+
+``` java
+import java.util.ArrayList;
+import java.util.HashMap;
+
+//Find Dupliucates in an arrayMap using a hashmap;
+
+
+
+public class DupicatesHashMap {
+
+	public static void main(String[] args) {
+		HashMap<Integer, Integer> map=new HashMap<Integer, Integer>();
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+		
+		nums.add(12);
+		nums.add(2);
+		nums.add(2);
+		nums.add(2);
+		nums.add(9);
+		nums.add(9);
+		nums.add(10);
+		nums.add(10);
+		
+		
+		for (int i = 0; i < nums.size(); i++) {
+            if (map.containsKey(nums.get(i))) {
+                map.put(nums.get(i), map.get(nums.get(i)) + 1);
+            } else {
+                map.put(nums.get(i), 1);
+            }
+        }
+
+//		map.forEach((key,value)->{
+////			System.out.println("Key "+key +" Value " +value);
+////			System.out.println("Value " +value);
+//
+//			if(value>1) {
+//				System.out.println(key);
+//			}
+//		});
+		
+		map.forEach((key,value)->{
+			System.out.println("Key "+key+" Value "+value);
+		});
+
+	}
+
+}
+
+
+```
